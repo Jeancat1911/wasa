@@ -56,8 +56,6 @@ class Tool {
       this.offHeartNum = 1;
       this.offHearts = [];
       this.data = null;
-      this.text1 = "¡Hola Mundo!"; // Texto añadido
-      this.text2 = "wasa insane";
     }
   
     onInit() {
@@ -86,20 +84,12 @@ class Tool {
       this.onInit();
     }
   
-    drawText() {
-      this.ctx.font = "44px Arial";
-      this.ctx.fillStyle = "#e44d5a"; // Color cambiado a rojo
-      this.ctx.textAlign = "center";
-      this.ctx.fillText(this.text1, this.width / 2, 400);
-      this.ctx.fillText(this.text2, this.width / 2, 1240);
-    }
-  
     render() {
       this.ctx.clearRect(0, 0, this.width, this.height);
       for (let i = 0; i < this.hearts.length; i++) {
         this.hearts[i].render(i);
       }
-      this.drawText(); // Añadido para dibujar el texto
+      
     }
   
     resize() {
